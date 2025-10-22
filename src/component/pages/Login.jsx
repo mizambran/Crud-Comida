@@ -1,5 +1,5 @@
 
-const Menu = () => {
+const Login = () => {
   return (
     <div>
       
@@ -7,4 +7,4 @@ const Menu = () => {
   )
 }
 
-export default Menu
+export default Login
