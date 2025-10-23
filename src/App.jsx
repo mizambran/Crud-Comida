@@ -22,13 +22,27 @@ instalamos npm i react-router
 intalamos npm install react-bootstrap bootstrap */
 
 
-
+import { BrowserRouter, Route, Routes } from 'react-router'
 import './App.css'
+import Menu from './component/shared/Menu'
+import Footer from './component/shared/Footer'
+import Home from './component/pages/Home'
 
 function App() {
 
   return (
     <>
+    <BrowserRouter>
+    {/* BrowserRouter se usa porque utilizamos Bootstrap Router por las rutas */}
+    <Menu></Menu>
+    <main>
+      <Routes>
+        <Route path='/' element={<Home/>}></Route>
+        {/* aca llamamos a todos los componentes como Home, login, Nosotros, Contacto  */}
+      </Routes>
+    </main>
+    <Footer></Footer>
+    </BrowserRouter>
     </>
   )
 }
